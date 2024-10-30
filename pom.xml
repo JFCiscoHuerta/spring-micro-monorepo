@@ -6,7 +6,6 @@
   <artifactId>SpringMicroMonorepo</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Archetype - SpringMicroMonorepo</name>
 
   <modules>
     <module>businessdomain</module>
@@ -19,6 +18,7 @@
     <maven.compiler.target>21</maven.compiler.target>
     <maven.surefire.version>3.2.5</maven.surefire.version>
     <spring.boot.version>3.3.5</spring.boot.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <dockerfile-maven-version>1.4.13</dockerfile-maven-version>
   </properties>
 
