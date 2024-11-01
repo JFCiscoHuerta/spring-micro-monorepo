@@ -14,6 +14,7 @@
 
     <modules>
         <module>Customer</module>
+        <module>Product</module>
     </modules>
 
     <properties>
