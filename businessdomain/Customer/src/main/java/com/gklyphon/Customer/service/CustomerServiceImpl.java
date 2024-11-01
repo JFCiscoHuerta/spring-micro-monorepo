@@ -43,11 +43,10 @@ public class CustomerServiceImpl implements ICustomerService {
 
     @Override
     @Transactional
-    public boolean deleteCustomerById(Long id) {
+    public void deleteCustomerById(Long id) {
         if (!customerRepository.existsById(id)) {
-            return false;
+            throw new ElementNotFoundException("Customer with id: "+id+" does not exists.");
         }
         customerRepository.deleteById(id);
-        return true;
     }
 }
