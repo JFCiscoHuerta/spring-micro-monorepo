@@ -87,7 +87,7 @@ class CustomerServiceImplTest {
     @Test
     void deleteCustomer_shouldReturnTrue_whenDeleteCustomerByIdSuccessfully() {
         when(customerRepository.existsById(1L)).thenReturn(true);
-        assertTrue(customerService.deleteCustomerById(1L));
+        assertDoesNotThrow(()-> {customerService.deleteCustomerById(1L);});
         verify(customerRepository, times(1)).deleteById(1L);
         verify(customerRepository, times(1)).existsById(1L);
     }
